@@ -17,6 +17,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-sm);
   }
+
+  .anchoring__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ---- Mobile & Below (max 768px) ---- */
@@ -105,6 +109,15 @@
   /* Direction */
   .direction__grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Anchoring */
+  .anchoring__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .anchoring__stats {
+    gap: var(--space-sm);
   }
 
   /* Skills */

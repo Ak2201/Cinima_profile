@@ -34,6 +34,16 @@ const Gallery = {
         this.filterGallery(btn, '#direction-gallery', '.direction__card');
       });
     }
+
+    // Anchoring filters
+    const anchoringFilters = document.querySelector('#anchoring .portfolio__filters');
+    if (anchoringFilters) {
+      anchoringFilters.addEventListener('click', (e) => {
+        const btn = e.target.closest('.portfolio__filter-btn');
+        if (!btn) return;
+        this.filterGallery(btn, '#anchoring-gallery', '.anchoring__card');
+      });
+    }
   },
 
   filterGallery(activeBtn, gridSelector, itemSelector) {
