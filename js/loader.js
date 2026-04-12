@@ -28,7 +28,7 @@ const Loader = {
     // After bar fills, reveal name
     setTimeout(() => {
       loaderText.classList.add('name-reveal');
-      loaderText.textContent = 'AARON ARUN';
+      loaderText.textContent = 'ARUNKUMAR MOHANAN';
     }, 2200);
 
     // Slide loader away

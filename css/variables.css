@@ -3,18 +3,18 @@
    ============================================ */
 
 :root {
-  /* Colors — Cinematic Dark Theme */
-  --color-bg-primary:      #0a0a0a;
-  --color-bg-secondary:    #111111;
-  --color-bg-card:         #1a1a1a;
-  --color-bg-card-hover:   #222222;
+  /* Colors — Warm Cinematic Theme */
+  --color-bg-primary:      #0c0a08;
+  --color-bg-secondary:    #12100e;
+  --color-bg-card:         #1a1710;
+  --color-bg-card-hover:   #22201a;
   --color-text-primary:    #f5f0e8;
   --color-text-secondary:  #8a8578;
   --color-text-muted:      #5a5550;
-  --color-accent:          #c9a84c;
-  --color-accent-hover:    #ddb94e;
-  --color-accent-subtle:   rgba(201, 168, 76, 0.12);
-  --color-accent-glow:     rgba(201, 168, 76, 0.25);
+  --color-accent:          #d4a54a;
+  --color-accent-hover:    #e6b85a;
+  --color-accent-subtle:   rgba(212, 165, 74, 0.12);
+  --color-accent-glow:     rgba(212, 165, 74, 0.25);
   --color-border:          rgba(255, 255, 255, 0.06);
   --color-border-hover:    rgba(255, 255, 255, 0.12);
   --color-overlay:         rgba(0, 0, 0, 0.7);
