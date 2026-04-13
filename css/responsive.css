@@ -192,8 +192,7 @@ img, video, iframe {
   }
 
   .featured__player-wrapper {
-    max-height: 550px;
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 16 / 9;
   }
 
   .featured__stats {

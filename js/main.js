@@ -14,10 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
   }
 
-  // Start loader
-  Loader.init();
-
-  // Initialize everything after loader completes
+  // Register loaderDone listener BEFORE Loader.init() so we don't miss the
+  // synchronous dispatch that happens when sessionStorage.loaderShown is set.
   document.addEventListener('loaderDone', () => {
     ScrollAnimations.init();
     Parallax.init();
@@ -27,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     Music.init();
     SmoothScroll.init();
   });
+
+  // Start loader
+  Loader.init();
 
   // Contact form handler
   const form = document.getElementById('contact-form');
