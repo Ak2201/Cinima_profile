@@ -2,6 +2,16 @@
    RESPONSIVE — Mobile First Overrides
    ============================================ */
 
+/* Prevent horizontal scroll everywhere */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+img, video, iframe {
+  max-width: 100%;
+}
+
 /* ---- Tablet & Below (max 1024px) ---- */
 @media (max-width: 1024px) {
   .portfolio__grid {
@@ -32,6 +42,10 @@
   :root {
     --section-padding: var(--space-lg) var(--space-sm);
     --nav-height: 60px;
+  }
+
+  .container {
+    padding: 0 var(--space-sm);
   }
 
   /* Navigation mobile menu */
@@ -76,6 +90,47 @@
     font-size: 1.2rem;
   }
 
+  .nav__music-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  /* Hero — reduce name size and spacing for mobile */
+  .hero {
+    padding: 0 var(--space-sm);
+    min-height: 100vh;
+  }
+
+  .hero__name {
+    font-size: clamp(1.75rem, 7.5vw, 3rem);
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    padding: 0 var(--space-xs);
+    word-spacing: 100vw;
+  }
+
+  .hero__tagline {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    padding: 0 var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .hero__cta {
+    padding: 12px 32px;
+    font-size: 0.8rem;
+  }
+
+  .hero__scroll-indicator {
+    bottom: var(--space-sm);
+  }
+
+  /* Section headings smaller on mobile */
+  .section__heading {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
   /* About section */
   .about__grid {
     grid-template-columns: 1fr;
@@ -83,24 +138,54 @@
   }
 
   .about__image-placeholder {
-    max-width: 300px;
+    max-width: 280px;
     margin: 0 auto;
   }
 
-  /* Showreel */
-  .showreel__thumbnails {
-    grid-template-columns: repeat(2, 1fr);
+  .about__bio {
+    font-size: 0.95rem;
   }
 
-  /* Featured Work */
+  .about__quote {
+    font-size: 1rem;
+    padding-left: var(--space-sm);
+  }
+
+  /* Featured Work (Expectation) */
+  .featured__title {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .featured__credits {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    word-break: break-word;
+  }
+
+  .featured__tagline {
+    font-size: 1rem;
+    padding: 0 var(--space-xs);
+  }
+
+  .featured__player {
+    max-width: 100%;
+  }
+
+  .featured__player-wrapper {
+    max-height: 550px;
+    aspect-ratio: 9 / 16;
+  }
+
   .featured__stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
+    padding: var(--space-sm);
   }
 
   .featured__stat {
     border-right: none;
     border-bottom: 1px solid var(--color-border);
+    padding: var(--space-sm) var(--space-xs);
   }
 
   .featured__stat:nth-child(odd) {
@@ -109,18 +194,51 @@
 
   .featured__stat:last-child {
     grid-column: 1 / -1;
+    border-bottom: none;
+  }
+
+  .featured__stat-number {
+    font-size: 1.4rem;
+  }
+
+  .featured__stat-label {
+    font-size: 0.65rem;
+  }
+
+  .featured__badges {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .featured__badge {
+    font-size: 0.75rem;
+    padding: 8px 16px;
+  }
+
+  .featured__badge-text {
+    font-size: 0.7rem;
+  }
+
+  .featured__comments-heading {
+    font-size: 1.5rem;
   }
 
   .featured__comments-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-sm);
   }
 
-  .featured__player-wrapper {
-    max-height: 600px;
+  .featured__comment {
+    padding: var(--space-sm);
+  }
+
+  .featured__comment p {
+    font-size: 0.95rem;
   }
 
   .featured__screenshot-gallery {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xs);
   }
 
   /* Gallery */
@@ -129,40 +247,134 @@
     gap: var(--space-xs);
   }
 
+  .portfolio__item-title {
+    font-size: 1rem;
+  }
+
+  .portfolio__item-overlay {
+    padding: var(--space-sm);
+  }
+
   .portfolio__filters {
     overflow-x: auto;
     flex-wrap: nowrap;
     padding-bottom: var(--space-xs);
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: 0 calc(-1 * var(--space-sm)) var(--space-md);
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+
+  .portfolio__filters::-webkit-scrollbar {
+    display: none;
   }
 
   .portfolio__filter-btn {
     white-space: nowrap;
     flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 0.8rem;
   }
 
   /* Direction */
   .direction__grid {
     grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .direction__intro {
+    font-size: 0.95rem;
+  }
+
+  .direction__card-title {
+    font-size: 1.15rem;
+  }
+
+  .direction__card-info {
+    padding: var(--space-sm);
+  }
+
+  .direction__card-badge {
+    font-size: 0.65rem;
+    padding: 3px 8px;
   }
 
   /* Anchoring */
   .anchoring__grid {
     grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .anchoring__intro {
+    font-size: 0.95rem;
   }
 
   .anchoring__stats {
+    flex-direction: column;
     gap: var(--space-sm);
+    padding: var(--space-sm) 0;
+  }
+
+  .anchoring__stat {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-sm);
+  }
+
+  .anchoring__stat:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .anchoring__card-title {
+    font-size: 1.05rem;
+  }
+
+  .anchoring__card-info {
+    padding: var(--space-sm);
+  }
+
+  .anchoring__testimonial {
+    padding: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  .anchoring__testimonial p {
+    font-size: 1rem;
   }
 
   /* Skills */
   .skills__grid {
     grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .skills__items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .skills__ring {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skills__lang {
+    grid-template-columns: 60px 1fr auto;
+    gap: var(--space-xs);
+  }
+
+  .skills__lang-name {
+    font-size: 0.85rem;
   }
 
   /* Timeline */
+  .timeline {
+    padding: var(--space-sm) 0;
+  }
+
   .timeline__line {
-    left: 20px;
+    left: 15px;
   }
 
   .timeline__item,
@@ -170,15 +382,29 @@
   .timeline__item--right {
     width: 100%;
     margin-left: 0;
-    padding-left: calc(40px + var(--space-sm));
+    padding-left: calc(35px + var(--space-xs));
     padding-right: 0;
+    padding-bottom: var(--space-md);
     text-align: left;
   }
 
   .timeline__item--left::before,
   .timeline__item--right::before {
-    left: 15px;
+    left: 10px;
     right: auto;
+  }
+
+  .timeline__content {
+    padding: var(--space-sm);
+  }
+
+  .timeline__title {
+    font-size: 1rem;
+  }
+
+  .timeline__role,
+  .timeline__desc {
+    font-size: 0.85rem;
   }
 
   /* Contact */
@@ -191,15 +417,44 @@
     grid-template-columns: 1fr;
   }
 
+  .contact__tagline {
+    font-size: 1rem;
+  }
+
+  .contact__link {
+    font-size: 0.95rem;
+  }
+
+  .contact__link-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
   /* Lightbox */
   .lightbox__prev,
   .lightbox__next {
     font-size: 1.5rem;
   }
+
+  .lightbox__close {
+    top: var(--space-sm);
+    right: var(--space-sm);
+  }
+
+  /* Footer */
+  .footer__copy,
+  .footer__tagline {
+    font-size: 0.75rem;
+  }
 }
 
 /* ---- Small Phone (max 480px) ---- */
 @media (max-width: 480px) {
+  :root {
+    --section-padding: var(--space-md) var(--space-sm);
+  }
+
   .portfolio__grid {
     grid-template-columns: 1fr;
   }
@@ -209,10 +464,85 @@
   }
 
   .skills__items {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__name {
+    font-size: 2rem;
+    letter-spacing: 0.03em;
+  }
+
+  .hero__tagline {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
   }
 
   .hero__cta {
-    padding: 12px 32px;
+    padding: 10px 24px;
+    font-size: 0.75rem;
+  }
+
+  .featured__title {
+    font-size: 2rem;
+  }
+
+  .featured__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .featured__stat {
+    border-right: none !important;
+  }
+
+  .featured__stat:nth-child(odd) {
+    border-right: none !important;
+  }
+
+  .featured__screenshot-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .featured__stat-number {
+    font-size: 1.75rem;
+  }
+
+  .about__bio {
+    font-size: 0.9rem;
+  }
+
+  .section__heading {
+    font-size: 1.75rem;
+  }
+}
+
+/* ---- Tiny phones (max 360px) ---- */
+@media (max-width: 360px) {
+  .hero__name {
+    font-size: 1.75rem;
+    letter-spacing: 0.02em;
+  }
+
+  .nav__logo {
+    font-size: 1.25rem;
+  }
+
+  .hero__tagline {
+    font-size: 0.65rem;
+  }
+}
+
+/* ---- Landscape orientation on short phones ---- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+    padding-top: var(--nav-height);
+  }
+
+  .hero__name {
+    font-size: 2rem;
+  }
+
+  .hero__tagline {
+    margin-bottom: var(--space-sm);
   }
 }
