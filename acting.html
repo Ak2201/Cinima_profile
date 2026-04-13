@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ArunKumar Mohanan — Acting Portfolio. Film stills, photoshoots, and behind-the-scenes work.">
+  <meta property="og:title" content="ArunKumar Mohanan — Acting Portfolio">
+  <meta property="og:description" content="Acting work by ArunKumar Mohanan — film stills, photoshoots, behind the scenes.">
+  <meta property="og:type" content="website">
+  <title>ArunKumar Mohanan — Acting Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div id="loader" class="loader">
+    <div class="loader__content">
+      <p class="loader__text" id="loader-text">Loading Scene...</p>
+      <div class="loader__bar">
+        <div class="loader__bar-fill" id="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo">AM</a>
+      <input type="checkbox" id="nav-toggle" class="nav__toggle-input" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="nav__hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="direction.html">Direction</a></li>
+        <li><a href="acting.html" class="active">Acting</a></li>
+        <li><a href="anchoring.html">Anchoring</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav__music-btn" id="music-toggle" aria-label="Toggle background music">
+        <span class="music-icon">&#9835;</span>
+      </button>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero hero--focused">
+    <img class="hero__bg-image" src="assets/images/headshot/headshot.jpg" alt="" data-parallax-speed="0.4">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__page-label">Portfolio · 04</p>
+      <h1 class="hero__name">ACTING</h1>
+      <p class="hero__tagline">Method · Improv · Comedy · Theatre</p>
+      <a href="#portfolio" class="hero__cta">Explore Work</a>
+    </div>
+    <div class="hero__scroll-indicator">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section portfolio">
+    <div class="container">
+      <h2 class="section__heading reveal">
+        <span class="section__heading-label">Acting Portfolio</span>
+        Selected Frames
+      </h2>
+      <div class="section__divider reveal"></div>
+      <p class="direction__intro reveal" style="--reveal-delay: 0.1s">
+        Film stills, editorial portraits, and behind-the-scenes moments — the visible craft of an LV Prasad-trained actor.
+      </p>
+
+      <div class="portfolio__filters reveal" style="--reveal-delay: 0.15s">
+        <button class="portfolio__filter-btn active" data-filter="all">All</button>
+        <button class="portfolio__filter-btn" data-filter="film-stills">Film Stills</button>
+        <button class="portfolio__filter-btn" data-filter="photoshoots">Photoshoots</button>
+        <button class="portfolio__filter-btn" data-filter="bts">Behind the Scenes</button>
+      </div>
+
+      <div class="portfolio__grid" id="acting-gallery">
+        <div class="portfolio__item reveal" data-category="film-stills">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500&h=625&fit=crop" alt="Expectation — Film Still" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Film Still</span>
+            <h3 class="portfolio__item-title">Expectation</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="photoshoots">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=625&fit=crop&crop=face" alt="Portrait Session" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Photoshoot</span>
+            <h3 class="portfolio__item-title">Portrait Session</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="film-stills">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=500&h=625&fit=crop" alt="Am I Selected — Film Still" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Film Still</span>
+            <h3 class="portfolio__item-title">Am I Selected</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="bts">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=500&h=625&fit=crop" alt="Behind the Scenes — On Set" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Behind the Scenes</span>
+            <h3 class="portfolio__item-title">On Set — LV Prasad</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="photoshoots">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?w=500&h=625&fit=crop&crop=face" alt="Dramatic Portrait" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Photoshoot</span>
+            <h3 class="portfolio__item-title">Dramatic Portrait</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="film-stills">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=500&h=625&fit=crop" alt="Cinematic Frame" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Film Still</span>
+            <h3 class="portfolio__item-title">Cinematic Frame</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="bts">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500&h=625&fit=crop" alt="Behind the Scenes — Direction" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Behind the Scenes</span>
+            <h3 class="portfolio__item-title">Director's Chair</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="photoshoots">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&h=625&fit=crop&crop=face" alt="Moody Portrait" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Photoshoot</span>
+            <h3 class="portfolio__item-title">Moody Lighting</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="film-stills">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500&h=625&fit=crop" alt="Cinema Frame" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Film Still</span>
+            <h3 class="portfolio__item-title">The Frame</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cross-nav reveal" style="--reveal-delay: 0.3s">
+        <p class="cross-nav__label">Explore More</p>
+        <div class="cross-nav__links">
+          <a href="direction.html" class="cross-nav__link">
+            <span class="cross-nav__num">03</span>
+            <span class="cross-nav__title">Direction Portfolio</span>
+            <span class="cross-nav__arrow">&rarr;</span>
+          </a>
+          <a href="anchoring.html" class="cross-nav__link">
+            <span class="cross-nav__num">05</span>
+            <span class="cross-nav__title">Anchoring &amp; Hosting</span>
+            <span class="cross-nav__arrow">&rarr;</span>
+          </a>
+          <a href="index.html" class="cross-nav__link">
+            <span class="cross-nav__num">00</span>
+            <span class="cross-nav__title">Full Portfolio</span>
+            <span class="cross-nav__arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section__heading reveal">
+        <span class="section__heading-label">Get in Touch</span>
+        Let's Collaborate
+      </h2>
+      <div class="section__divider reveal"></div>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <p class="contact__tagline">Open for acting roles in films, ads, web series, and theatre.</p>
+          <div class="contact__details">
+            <a href="mailto:arunaaron85@gmail.com" class="contact__link">
+              <span class="contact__link-icon">&#9993;</span>
+              arunaaron85@gmail.com
+            </a>
+            <a href="tel:+919486276429" class="contact__link">
+              <span class="contact__link-icon">&#9742;</span>
+              +91 94862 76429
+            </a>
+            <a href="https://www.instagram.com/the_arun_ak?igsh=NWc4cG1sYWVtdjBq" target="_blank" rel="noopener" class="contact__link">
+              <span class="contact__link-icon">&#9733;</span>
+              @the_arun_ak
+            </a>
+          </div>
+          <div class="contact__availability">
+            <span class="contact__status-dot"></span>
+            Currently available for projects
+          </div>
+        </div>
+
+        <form class="contact__form reveal" id="contact-form" style="--reveal-delay: 0.2s">
+          <div class="contact__form-row">
+            <div class="contact__field">
+              <input type="text" id="name" name="name" required placeholder=" ">
+              <label for="name">Your Name</label>
+            </div>
+            <div class="contact__field">
+              <input type="email" id="email" name="email" required placeholder=" ">
+              <label for="email">Email Address</label>
+            </div>
+          </div>
+          <div class="contact__field">
+            <input type="text" id="subject" name="subject" required placeholder=" ">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="contact__field">
+            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" class="contact__submit">
+            Send Message
+            <span class="contact__submit-arrow">&rarr;</span>
+          </button>
+          <div class="contact__success" id="form-success">
+            <span>&#10003;</span> Thank you! Your message has been received.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; 2025 ArunKumar Mohanan. All rights reserved.</p>
+        <p class="footer__tagline">Built with passion &amp; purpose.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" aria-label="Previous">&lsaquo;</button>
+    <button class="lightbox__next" aria-label="Next">&rsaquo;</button>
+    <div class="lightbox__content" id="lightbox-content"></div>
+  </div>
+
+  <audio id="bg-music" loop preload="none">
+    <source src="assets/audio/ambient-bg.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="js/loader.js"></script>
+  <script src="js/scroll-animations.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/grain.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ArunKumar Mohanan — Anchoring & Hosting Portfolio. Bilingual event MC for cultural, corporate, and college events.">
+  <meta property="og:title" content="ArunKumar Mohanan — Anchoring & Hosting">
+  <meta property="og:description" content="Event hosting and anchoring work by ArunKumar Mohanan — Tamil & English bilingual MC.">
+  <meta property="og:type" content="website">
+  <title>ArunKumar Mohanan — Anchoring &amp; Hosting</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div id="loader" class="loader">
+    <div class="loader__content">
+      <p class="loader__text" id="loader-text">Loading Scene...</p>
+      <div class="loader__bar">
+        <div class="loader__bar-fill" id="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo">AM</a>
+      <input type="checkbox" id="nav-toggle" class="nav__toggle-input" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="nav__hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="direction.html">Direction</a></li>
+        <li><a href="acting.html">Acting</a></li>
+        <li><a href="anchoring.html" class="active">Anchoring</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav__music-btn" id="music-toggle" aria-label="Toggle background music">
+        <span class="music-icon">&#9835;</span>
+      </button>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero hero--focused">
+    <img class="hero__bg-image" src="assets/images/anchoring/cultural-events/event-01.jpg" alt="" data-parallax-speed="0.4">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__page-label">Portfolio · 05</p>
+      <h1 class="hero__name">ANCHORING</h1>
+      <p class="hero__tagline">Bilingual MC · Tamil &amp; English · Stage Presence</p>
+      <a href="#anchoring" class="hero__cta">Explore Work</a>
+    </div>
+    <div class="hero__scroll-indicator">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <section id="anchoring" class="section anchoring">
+    <div class="container">
+      <h2 class="section__heading reveal">
+        <span class="section__heading-label">Anchoring &amp; Hosting</span>
+        Stage Work
+      </h2>
+      <div class="section__divider reveal"></div>
+      <p class="anchoring__intro reveal" style="--reveal-delay: 0.1s">
+        From college fests to corporate stages — commanding the mic, connecting with crowds, and turning every event into an unforgettable experience.
+      </p>
+
+      <div class="anchoring__stats reveal" style="--reveal-delay: 0.2s">
+        <div class="anchoring__stat">
+          <span class="anchoring__stat-number">50+</span>
+          <span class="anchoring__stat-label">Events Hosted</span>
+        </div>
+        <div class="anchoring__stat">
+          <span class="anchoring__stat-number">Bilingual</span>
+          <span class="anchoring__stat-label">English &amp; Tamil</span>
+        </div>
+        <div class="anchoring__stat">
+          <span class="anchoring__stat-number">5+</span>
+          <span class="anchoring__stat-label">Years Experience</span>
+        </div>
+      </div>
+
+      <div class="portfolio__filters reveal" style="--reveal-delay: 0.25s">
+        <button class="portfolio__filter-btn active" data-filter="all" data-gallery="anchoring">All</button>
+        <button class="portfolio__filter-btn" data-filter="corporate" data-gallery="anchoring">Corporate</button>
+        <button class="portfolio__filter-btn" data-filter="college" data-gallery="anchoring">College Fests</button>
+        <button class="portfolio__filter-btn" data-filter="cultural" data-gallery="anchoring">Cultural Events</button>
+      </div>
+
+      <div class="anchoring__grid" id="anchoring-gallery">
+        <div class="anchoring__card reveal" data-category="cultural">
+          <div class="anchoring__card-visual">
+            <img src="assets/images/anchoring/cultural-events/event-01.jpg" alt="Cultural Event Hosting" loading="lazy">
+            <div class="anchoring__card-overlay">
+              <span class="anchoring__card-type">Cultural Event</span>
+            </div>
+          </div>
+          <div class="anchoring__card-info">
+            <h3 class="anchoring__card-title">Audience Connect</h3>
+            <p class="anchoring__card-desc">Bringing the audience into the moment — that one-on-one interaction that turns a passive crowd into active participants.</p>
+          </div>
+        </div>
+
+        <div class="anchoring__card reveal" data-category="cultural">
+          <div class="anchoring__card-visual">
+            <img src="assets/images/anchoring/cultural-events/event-02.jpg" alt="Stage Hosting" loading="lazy">
+            <div class="anchoring__card-overlay">
+              <span class="anchoring__card-type">Cultural Event</span>
+            </div>
+          </div>
+          <div class="anchoring__card-info">
+            <h3 class="anchoring__card-title">Open-Air Cultural Night</h3>
+            <p class="anchoring__card-desc">Bilingual hosting under stage lights — switching between Tamil and English to keep every audience member engaged.</p>
+          </div>
+        </div>
+
+        <div class="anchoring__card reveal" data-category="cultural">
+          <div class="anchoring__card-visual">
+            <img src="assets/images/anchoring/cultural-events/event-03.jpg" alt="Live Event Hosting" loading="lazy">
+            <div class="anchoring__card-overlay">
+              <span class="anchoring__card-type">Cultural Event</span>
+            </div>
+          </div>
+          <div class="anchoring__card-info">
+            <h3 class="anchoring__card-title">Live Stage Hosting</h3>
+            <p class="anchoring__card-desc">Commanding the mic with energy and presence — keeping the show flowing through every transition.</p>
+          </div>
+        </div>
+
+        <div class="anchoring__card reveal" data-category="cultural">
+          <div class="anchoring__card-visual">
+            <img src="assets/images/anchoring/cultural-events/event-04.jpg" alt="Stage Performance" loading="lazy">
+            <div class="anchoring__card-overlay">
+              <span class="anchoring__card-type">Cultural Event</span>
+            </div>
+          </div>
+          <div class="anchoring__card-info">
+            <h3 class="anchoring__card-title">Crowd Engagement</h3>
+            <p class="anchoring__card-desc">Reading the room, working the crowd — that magic moment when everyone is in sync with the energy on stage.</p>
+          </div>
+        </div>
+
+        <div class="anchoring__card reveal" data-category="cultural">
+          <div class="anchoring__card-visual">
+            <img src="assets/images/anchoring/cultural-events/event-05.jpg" alt="Cultural Festival" loading="lazy">
+            <div class="anchoring__card-overlay">
+              <span class="anchoring__card-type">Cultural Event</span>
+            </div>
+          </div>
+          <div class="anchoring__card-info">
+            <h3 class="anchoring__card-title">Cultural Celebrations</h3>
+            <p class="anchoring__card-desc">Anchored traditional and cultural events, bringing warmth and energy to crowds of all ages.</p>
+          </div>
+        </div>
+
+        <div class="anchoring__card reveal" data-category="cultural">
+          <div class="anchoring__card-visual">
+            <img src="assets/images/anchoring/cultural-events/event-06.jpg" alt="Live Hosting" loading="lazy">
+            <div class="anchoring__card-overlay">
+              <span class="anchoring__card-type">Cultural Event</span>
+            </div>
+          </div>
+          <div class="anchoring__card-info">
+            <h3 class="anchoring__card-title">Festival Stage</h3>
+            <p class="anchoring__card-desc">Live event MC work — connecting performers, audience, and the moment into one seamless experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <blockquote class="anchoring__testimonial reveal" style="--reveal-delay: 0.3s">
+        <p>"ArunKumar brings an infectious energy to every stage. His ability to read the room and adapt on the fly makes him one of the best anchors we've worked with."</p>
+        <cite>&mdash; Event Organizer</cite>
+      </blockquote>
+
+      <div class="cross-nav reveal" style="--reveal-delay: 0.4s">
+        <p class="cross-nav__label">Explore More</p>
+        <div class="cross-nav__links">
+          <a href="direction.html" class="cross-nav__link">
+            <span class="cross-nav__num">03</span>
+            <span class="cross-nav__title">Direction Portfolio</span>
+            <span class="cross-nav__arrow">&rarr;</span>
+          </a>
+          <a href="acting.html" class="cross-nav__link">
+            <span class="cross-nav__num">04</span>
+            <span class="cross-nav__title">Acting Portfolio</span>
+            <span class="cross-nav__arrow">&rarr;</span>
+          </a>
+          <a href="index.html" class="cross-nav__link">
+            <span class="cross-nav__num">00</span>
+            <span class="cross-nav__title">Full Portfolio</span>
+            <span class="cross-nav__arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section__heading reveal">
+        <span class="section__heading-label">Get in Touch</span>
+        Book Me for Your Event
+      </h2>
+      <div class="section__divider reveal"></div>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <p class="contact__tagline">Open for corporate events, college fests, cultural celebrations, and more.</p>
+          <div class="contact__details">
+            <a href="mailto:arunaaron85@gmail.com" class="contact__link">
+              <span class="contact__link-icon">&#9993;</span>
+              arunaaron85@gmail.com
+            </a>
+            <a href="tel:+919486276429" class="contact__link">
+              <span class="contact__link-icon">&#9742;</span>
+              +91 94862 76429
+            </a>
+            <a href="https://www.instagram.com/the_arun_ak?igsh=NWc4cG1sYWVtdjBq" target="_blank" rel="noopener" class="contact__link">
+              <span class="contact__link-icon">&#9733;</span>
+              @the_arun_ak
+            </a>
+          </div>
+          <div class="contact__availability">
+            <span class="contact__status-dot"></span>
+            Currently available for projects
+          </div>
+        </div>
+
+        <form class="contact__form reveal" id="contact-form" style="--reveal-delay: 0.2s">
+          <div class="contact__form-row">
+            <div class="contact__field">
+              <input type="text" id="name" name="name" required placeholder=" ">
+              <label for="name">Your Name</label>
+            </div>
+            <div class="contact__field">
+              <input type="email" id="email" name="email" required placeholder=" ">
+              <label for="email">Email Address</label>
+            </div>
+          </div>
+          <div class="contact__field">
+            <input type="text" id="subject" name="subject" required placeholder=" ">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="contact__field">
+            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" class="contact__submit">
+            Send Message
+            <span class="contact__submit-arrow">&rarr;</span>
+          </button>
+          <div class="contact__success" id="form-success">
+            <span>&#10003;</span> Thank you! Your message has been received.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; 2025 ArunKumar Mohanan. All rights reserved.</p>
+        <p class="footer__tagline">Built with passion &amp; purpose.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" aria-label="Previous">&lsaquo;</button>
+    <button class="lightbox__next" aria-label="Next">&rsaquo;</button>
+    <div class="lightbox__content" id="lightbox-content"></div>
+  </div>
+
+  <audio id="bg-music" loop preload="none">
+    <source src="assets/audio/ambient-bg.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="js/loader.js"></script>
+  <script src="js/scroll-animations.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/grain.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
