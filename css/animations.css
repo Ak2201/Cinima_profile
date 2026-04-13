@@ -111,6 +111,378 @@
 .reveal-stagger > .reveal:nth-child(5) { --reveal-delay: 0.4s; }
 .reveal-stagger > .reveal:nth-child(6) { --reveal-delay: 0.5s; }
 
+/* ============================================
+   PREMIUM CINEMATIC ANIMATIONS
+   ============================================ */
+
+/* Floating animation for accents */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Shimmer for gold accents */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Soft pulse glow */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px var(--color-accent-subtle); }
+  50% { box-shadow: 0 0 40px var(--color-accent-glow), 0 0 60px var(--color-accent-subtle); }
+}
+
+/* Slow zoom for hero image */
+@keyframes slowZoom {
+  0%   { transform: scale(1) translateY(0); }
+  100% { transform: scale(1.08) translateY(-2%); }
+}
+
+/* Gradient sweep for buttons */
+@keyframes gradientSweep {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Counter rolling effect */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.9); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Spotlight sweep */
+@keyframes spotlight {
+  0%, 100% { background-position: -100% 0; }
+  50% { background-position: 200% 0; }
+}
+
+/* Image ken burns effect */
+@keyframes kenBurns {
+  0%   { transform: scale(1) translate(0, 0); }
+  50%  { transform: scale(1.06) translate(-1%, -1%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+/* Heading character cascade */
+@keyframes letterFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Rotating border for special elements */
+@keyframes borderSpin {
+  from { background-position: 0% 50%; }
+  to { background-position: 200% 50%; }
+}
+
+/* Apply slow zoom to hero background */
+.hero__bg-image {
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+/* Hero CTA enhanced gradient sweep */
+.hero__cta {
+  background: linear-gradient(
+    90deg,
+    var(--color-accent) 0%,
+    var(--color-accent-hover) 50%,
+    var(--color-accent) 100%
+  );
+  background-size: 200% 100%;
+  animation: gradientSweep 4s linear infinite;
+}
+
+/* Stat numbers float in */
+.featured__stat-number,
+.anchoring__stat-number {
+  animation: countUp 0.8s var(--ease-out-expo) forwards;
+}
+
+/* Section heading label gentle float */
+.section__heading-label {
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Section divider shimmer */
+.section__divider {
+  background: linear-gradient(
+    90deg,
+    var(--color-accent) 0%,
+    var(--color-accent-hover) 50%,
+    var(--color-accent) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Direction card hover - 3D tilt */
+.direction__card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.5s var(--ease-out-expo), border-color 0.3s var(--ease-out), box-shadow 0.5s var(--ease-out);
+}
+
+.direction__card:hover {
+  transform: translateY(-8px) rotateX(2deg);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px var(--color-accent-subtle);
+}
+
+.direction__card-visual img,
+.direction__card-visual {
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+/* Anchoring card lift on hover */
+.anchoring__card {
+  transition: transform 0.5s var(--ease-out-expo), border-color 0.3s var(--ease-out), box-shadow 0.5s var(--ease-out);
+}
+
+.anchoring__card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px var(--color-accent-subtle);
+}
+
+/* Portfolio item enhanced hover with rotation */
+.portfolio__item {
+  transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s var(--ease-out);
+}
+
+.portfolio__item:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+/* Stats card glow on hover */
+.stats-card {
+  transition: border-color 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+
+.stats-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 60px var(--color-accent-subtle);
+}
+
+/* Stat sheet items pop on hover */
+.stats-card__item {
+  transition: transform 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.stats-card__item:hover {
+  transform: translateX(4px);
+}
+
+.stats-card__item:hover .stats-card__key {
+  color: var(--color-accent);
+}
+
+/* Skill chip hover bounce */
+.stats-card__skill {
+  transition: transform 0.3s var(--ease-out-expo), background 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.stats-card__skill:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Featured stat hover lift */
+.featured__stat {
+  transition: transform 0.4s var(--ease-out-expo), background 0.4s var(--ease-out);
+}
+
+.featured__stat:hover {
+  background: var(--color-accent-subtle);
+  transform: translateY(-4px);
+}
+
+.featured__stat:hover .featured__stat-number {
+  color: var(--color-accent);
+}
+
+.featured__stat-number {
+  transition: color 0.3s var(--ease-out);
+}
+
+/* Filter button shimmer on active */
+.portfolio__filter-btn.active {
+  background: linear-gradient(
+    90deg,
+    var(--color-accent) 0%,
+    var(--color-accent-hover) 50%,
+    var(--color-accent) 100%
+  );
+  background-size: 200% 100%;
+  animation: gradientSweep 3s linear infinite;
+}
+
+/* Filter button hover */
+.portfolio__filter-btn {
+  transition: all 0.3s var(--ease-out-expo);
+}
+
+.portfolio__filter-btn:not(.active):hover {
+  transform: translateY(-2px);
+  background: var(--color-accent-subtle);
+  border-color: var(--color-accent);
+  color: var(--color-text-primary);
+}
+
+/* Featured comments cards hover lift */
+.featured__comment {
+  transition: transform 0.4s var(--ease-out-expo), border-left-color 0.3s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+
+.featured__comment:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  border-left-width: 5px;
+}
+
+/* Timeline content slide on hover */
+.timeline__content {
+  transition: transform 0.4s var(--ease-out-expo), border-color 0.3s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+
+.timeline__content:hover {
+  transform: translateX(6px);
+  box-shadow: -8px 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.timeline__item--right .timeline__content:hover {
+  transform: translateX(-6px);
+  box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .timeline__item--right .timeline__content:hover {
+    transform: translateX(6px);
+    box-shadow: -8px 8px 30px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Contact link slide */
+.contact__link {
+  transition: transform 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.contact__link:hover {
+  transform: translateX(8px);
+}
+
+.contact__link-icon {
+  transition: transform 0.4s var(--ease-out-expo), border-color 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.contact__link:hover .contact__link-icon {
+  transform: rotate(8deg) scale(1.1);
+}
+
+/* Direction card play button glow */
+.direction__card:hover .direction__card-play {
+  animation: glowPulse 1.5s ease-in-out infinite;
+}
+
+/* Direction views badge animation */
+.direction__card-views {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+/* About image subtle ken burns */
+.about__image-real {
+  transition: transform 1.2s var(--ease-out-expo);
+}
+
+.about__image-placeholder:hover .about__image-real {
+  transform: scale(1.05);
+}
+
+/* Featured Work badge soft pulse */
+.featured__badge {
+  transition: transform 0.3s var(--ease-out-expo), background 0.3s var(--ease-out);
+}
+
+.featured__badge:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: var(--color-accent);
+  color: var(--color-bg-primary);
+}
+
+.featured__badge:hover .featured__badge-text {
+  color: var(--color-bg-primary);
+}
+
+/* Section heading underline reveal */
+.section__heading {
+  position: relative;
+  display: inline-block;
+}
+
+/* Featured screenshot hover zoom */
+.featured__screenshot-frame {
+  transition: transform 0.4s var(--ease-out-expo), border-color 0.3s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+
+.featured__screenshot-frame:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Showreel thumbnail hover */
+.showreel__thumb {
+  transition: transform 0.4s var(--ease-out-expo), border-color 0.3s var(--ease-out);
+}
+
+.showreel__thumb:hover {
+  transform: translateY(-4px) scale(1.04);
+}
+
+/* Anchoring stat hover */
+.anchoring__stat {
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.anchoring__stat:hover {
+  transform: translateY(-4px);
+}
+
+.anchoring__stat:hover .anchoring__stat-number {
+  text-shadow: 0 0 30px var(--color-accent-glow);
+}
+
+.anchoring__stat-number {
+  transition: text-shadow 0.4s var(--ease-out);
+}
+
+/* Nav music button rotation on hover */
+.nav__music-btn {
+  transition: transform 0.4s var(--ease-out-expo), border-color 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.nav__music-btn:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Featured tagline italic shimmer */
+.featured__tagline {
+  background: linear-gradient(
+    90deg,
+    var(--color-text-secondary) 0%,
+    var(--color-accent) 50%,
+    var(--color-text-secondary) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -122,5 +494,9 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .hero__bg-image {
+    animation: none;
   }
 }

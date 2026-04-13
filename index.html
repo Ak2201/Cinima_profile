@@ -53,8 +53,8 @@
       <ul class="nav__links">
         <li><a href="#about">About</a></li>
         <li><a href="#showreel">Featured</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#direction">Direction</a></li>
+        <li><a href="#portfolio">Acting</a></li>
         <li><a href="#anchoring">Anchoring</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -71,11 +71,7 @@
        HERO SECTION
        ============================================ -->
   <section id="hero" class="hero">
-    <!-- REPLACE: Add hero-video.mp4 to assets/video/ and uncomment the video tag below -->
-    <!-- <video class="hero__video" autoplay muted loop playsinline>
-      <source src="assets/video/hero-video.mp4" type="video/mp4">
-    </video> -->
-    <div class="hero__bg-animated" data-parallax-speed="0.4"></div>
+    <img class="hero__bg-image" src="assets/images/hero/hero-bg.jpg" alt="" data-parallax-speed="0.4">
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <h1 class="hero__name" id="hero-name">ARUNKUMAR MOHANAN</h1>
@@ -96,9 +92,8 @@
     <div class="container">
       <div class="about__grid">
         <div class="about__image-col reveal reveal-left">
-          <!-- REPLACE: Swap this Unsplash image with your actual headshot -->
           <div class="about__image-placeholder">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop&crop=face" alt="ArunKumar Mohanan — Headshot" class="about__image-real">
+            <img src="assets/images/headshot/headshot.jpg" alt="ArunKumar Mohanan — Headshot" class="about__image-real">
           </div>
         </div>
         <div class="about__text-col">
@@ -330,109 +325,12 @@
   </section>
 
   <!-- ============================================
-       ACTING PORTFOLIO / GALLERY
-       ============================================ -->
-  <section id="portfolio" class="section portfolio">
-    <div class="container">
-      <h2 class="section__heading reveal">
-        <span class="section__heading-label">03</span>
-        Acting Portfolio
-      </h2>
-      <div class="section__divider reveal"></div>
-
-      <!-- Filter buttons -->
-      <div class="portfolio__filters reveal" style="--reveal-delay: 0.1s">
-        <button class="portfolio__filter-btn active" data-filter="all">All</button>
-        <button class="portfolio__filter-btn" data-filter="film-stills">Film Stills</button>
-        <button class="portfolio__filter-btn" data-filter="photoshoots">Photoshoots</button>
-        <button class="portfolio__filter-btn" data-filter="bts">Behind the Scenes</button>
-      </div>
-
-      <!-- Gallery grid — REPLACE: Swap Unsplash URLs with your actual photos -->
-      <div class="portfolio__grid" id="acting-gallery">
-        <div class="portfolio__item reveal" data-category="film-stills">
-          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500&h=625&fit=crop" alt="Expectation — Film Still" loading="lazy">
-          <div class="portfolio__item-overlay">
-            <span class="portfolio__item-category">Film Still</span>
-            <h3 class="portfolio__item-title">Expectation</h3>
-            <span class="portfolio__item-view">View</span>
-          </div>
-        </div>
-        <div class="portfolio__item reveal" data-category="photoshoots">
-          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=625&fit=crop&crop=face" alt="Portrait Session" loading="lazy">
-          <div class="portfolio__item-overlay">
-            <span class="portfolio__item-category">Photoshoot</span>
-            <h3 class="portfolio__item-title">Portrait Session</h3>
-            <span class="portfolio__item-view">View</span>
-          </div>
-        </div>
-        <div class="portfolio__item reveal" data-category="film-stills">
-          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=500&h=625&fit=crop" alt="Am I Selected — Film Still" loading="lazy">
-          <div class="portfolio__item-overlay">
-            <span class="portfolio__item-category">Film Still</span>
-            <h3 class="portfolio__item-title">Am I Selected</h3>
-            <span class="portfolio__item-view">View</span>
-          </div>
-        </div>
-        <div class="portfolio__item reveal" data-category="bts">
-          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=500&h=625&fit=crop" alt="Behind the Scenes — On Set" loading="lazy">
-          <div class="portfolio__item-overlay">
-            <span class="portfolio__item-category">Behind the Scenes</span>
-            <h3 class="portfolio__item-title">On Set — LV Prasad</h3>
-            <span class="portfolio__item-view">View</span>
-          </div>
-        </div>
-        <div class="portfolio__item reveal" data-category="photoshoots">
-          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?w=500&h=625&fit=crop&crop=face" alt="Dramatic Portrait" loading="lazy">
-          <div class="portfolio__item-overlay">
-            <span class="portfolio__item-category">Photoshoot</span>
-            <h3 class="portfolio__item-title">Dramatic Portrait</h3>
-            <span class="portfolio__item-view">View</span>
-          </div>
-        </div>
-        <div class="portfolio__item reveal" data-category="film-stills">
-          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=500&h=625&fit=crop" alt="Cinematic Frame" loading="lazy">
-          <div class="portfolio__item-overlay">
-            <span class="portfolio__item-category">Film Still</span>
-            <h3 class="portfolio__item-title">Cinematic Frame</h3>
-            <span class="portfolio__item-view">View</span>
-          </div>
-        </div>
-        <div class="portfolio__item reveal" data-category="bts">
-          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1518676590747-1e3dcf5a04b2?w=500&h=625&fit=crop" alt="Behind the Scenes — Direction" loading="lazy">
-          <div class="portfolio__item-overlay">
-            <span class="portfolio__item-category">Behind the Scenes</span>
-            <h3 class="portfolio__item-title">Director's Chair</h3>
-            <span class="portfolio__item-view">View</span>
-          </div>
-        </div>
-        <div class="portfolio__item reveal" data-category="photoshoots">
-          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&h=625&fit=crop&crop=face" alt="Moody Portrait" loading="lazy">
-          <div class="portfolio__item-overlay">
-            <span class="portfolio__item-category">Photoshoot</span>
-            <h3 class="portfolio__item-title">Moody Lighting</h3>
-            <span class="portfolio__item-view">View</span>
-          </div>
-        </div>
-        <div class="portfolio__item reveal" data-category="film-stills">
-          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500&h=625&fit=crop" alt="Cinema Frame" loading="lazy">
-          <div class="portfolio__item-overlay">
-            <span class="portfolio__item-category">Film Still</span>
-            <h3 class="portfolio__item-title">The Frame</h3>
-            <span class="portfolio__item-view">View</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       DIRECTION PORTFOLIO
+       DIRECTION PORTFOLIO (moved before Acting)
        ============================================ -->
   <section id="direction" class="section direction">
     <div class="container">
       <h2 class="section__heading reveal">
-        <span class="section__heading-label">04</span>
+        <span class="section__heading-label">03</span>
         As a Director
       </h2>
       <div class="section__divider reveal"></div>
@@ -440,7 +338,6 @@
         Stories I've shaped from behind the lens — exploring silence, tension, and the human condition.
       </p>
 
-      <!-- Direction filter buttons -->
       <div class="portfolio__filters reveal" style="--reveal-delay: 0.15s">
         <button class="portfolio__filter-btn active" data-filter="all" data-gallery="direction">All</button>
         <button class="portfolio__filter-btn" data-filter="short-film" data-gallery="direction">Short Films</button>
@@ -448,7 +345,6 @@
         <button class="portfolio__filter-btn" data-filter="commercial" data-gallery="direction">Commercials</button>
       </div>
 
-      <!-- Direction projects grid -->
       <div class="direction__grid" id="direction-gallery">
         <div class="direction__card reveal" data-category="short-film">
           <div class="direction__card-visual" style="--dir-hue: 35; --dir-accent: #6b5a2a">
@@ -515,6 +411,101 @@
   </section>
 
   <!-- ============================================
+       ACTING PORTFOLIO / GALLERY
+       ============================================ -->
+  <section id="portfolio" class="section portfolio">
+    <div class="container">
+      <h2 class="section__heading reveal">
+        <span class="section__heading-label">04</span>
+        Acting Portfolio
+      </h2>
+      <div class="section__divider reveal"></div>
+
+      <div class="portfolio__filters reveal" style="--reveal-delay: 0.1s">
+        <button class="portfolio__filter-btn active" data-filter="all">All</button>
+        <button class="portfolio__filter-btn" data-filter="film-stills">Film Stills</button>
+        <button class="portfolio__filter-btn" data-filter="photoshoots">Photoshoots</button>
+        <button class="portfolio__filter-btn" data-filter="bts">Behind the Scenes</button>
+      </div>
+
+      <div class="portfolio__grid" id="acting-gallery">
+        <div class="portfolio__item reveal" data-category="film-stills">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500&h=625&fit=crop" alt="Expectation — Film Still" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Film Still</span>
+            <h3 class="portfolio__item-title">Expectation</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="photoshoots">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=625&fit=crop&crop=face" alt="Portrait Session" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Photoshoot</span>
+            <h3 class="portfolio__item-title">Portrait Session</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="film-stills">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=500&h=625&fit=crop" alt="Am I Selected — Film Still" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Film Still</span>
+            <h3 class="portfolio__item-title">Am I Selected</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="bts">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=500&h=625&fit=crop" alt="Behind the Scenes — On Set" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Behind the Scenes</span>
+            <h3 class="portfolio__item-title">On Set — LV Prasad</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="photoshoots">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?w=500&h=625&fit=crop&crop=face" alt="Dramatic Portrait" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Photoshoot</span>
+            <h3 class="portfolio__item-title">Dramatic Portrait</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="film-stills">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=500&h=625&fit=crop" alt="Cinematic Frame" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Film Still</span>
+            <h3 class="portfolio__item-title">Cinematic Frame</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="bts">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500&h=625&fit=crop" alt="Behind the Scenes — Direction" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Behind the Scenes</span>
+            <h3 class="portfolio__item-title">Director's Chair</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="photoshoots">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&h=625&fit=crop&crop=face" alt="Moody Portrait" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Photoshoot</span>
+            <h3 class="portfolio__item-title">Moody Lighting</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+        <div class="portfolio__item reveal" data-category="film-stills">
+          <img class="portfolio__item-img" src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500&h=625&fit=crop" alt="Cinema Frame" loading="lazy">
+          <div class="portfolio__item-overlay">
+            <span class="portfolio__item-category">Film Still</span>
+            <h3 class="portfolio__item-title">The Frame</h3>
+            <span class="portfolio__item-view">View</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
        ANCHORING / EVENT HOSTING SECTION
        ============================================ -->
   <section id="anchoring" class="section anchoring">
@@ -552,83 +543,82 @@
         <button class="portfolio__filter-btn" data-filter="cultural" data-gallery="anchoring">Cultural Events</button>
       </div>
 
-      <!-- Anchoring gallery grid — REPLACE: Swap Unsplash URLs with your actual event photos -->
       <div class="anchoring__grid" id="anchoring-gallery">
-        <div class="anchoring__card reveal" data-category="college">
+        <div class="anchoring__card reveal" data-category="cultural">
           <div class="anchoring__card-visual">
-            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop" alt="College Fest Hosting" loading="lazy">
+            <img src="assets/images/anchoring/cultural-events/event-01.jpg" alt="Cultural Event Hosting" loading="lazy">
             <div class="anchoring__card-overlay">
-              <span class="anchoring__card-type">College Fest</span>
+              <span class="anchoring__card-type">Cultural Event</span>
             </div>
           </div>
           <div class="anchoring__card-info">
-            <h3 class="anchoring__card-title">Annual College Festival</h3>
-            <p class="anchoring__card-desc">Hosted the main stage events — from cultural performances to celebrity interactions — energizing an audience of 3000+.</p>
-          </div>
-        </div>
-
-        <div class="anchoring__card reveal" data-category="corporate">
-          <div class="anchoring__card-visual">
-            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&h=500&fit=crop" alt="Corporate Event" loading="lazy">
-            <div class="anchoring__card-overlay">
-              <span class="anchoring__card-type">Corporate</span>
-            </div>
-          </div>
-          <div class="anchoring__card-info">
-            <h3 class="anchoring__card-title">Corporate Conference</h3>
-            <p class="anchoring__card-desc">Emceed corporate conferences and product launches with a polished, professional delivery.</p>
+            <h3 class="anchoring__card-title">Audience Connect</h3>
+            <p class="anchoring__card-desc">Bringing the audience into the moment — that one-on-one interaction that turns a passive crowd into active participants.</p>
           </div>
         </div>
 
         <div class="anchoring__card reveal" data-category="cultural">
           <div class="anchoring__card-visual">
-            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=500&fit=crop" alt="Cultural Event" loading="lazy">
+            <img src="assets/images/anchoring/cultural-events/event-02.jpg" alt="Stage Hosting" loading="lazy">
+            <div class="anchoring__card-overlay">
+              <span class="anchoring__card-type">Cultural Event</span>
+            </div>
+          </div>
+          <div class="anchoring__card-info">
+            <h3 class="anchoring__card-title">Open-Air Cultural Night</h3>
+            <p class="anchoring__card-desc">Bilingual hosting under stage lights — switching between Tamil and English to keep every audience member engaged.</p>
+          </div>
+        </div>
+
+        <div class="anchoring__card reveal" data-category="cultural">
+          <div class="anchoring__card-visual">
+            <img src="assets/images/anchoring/cultural-events/event-03.jpg" alt="Live Event Hosting" loading="lazy">
+            <div class="anchoring__card-overlay">
+              <span class="anchoring__card-type">Cultural Event</span>
+            </div>
+          </div>
+          <div class="anchoring__card-info">
+            <h3 class="anchoring__card-title">Live Stage Hosting</h3>
+            <p class="anchoring__card-desc">Commanding the mic with energy and presence — keeping the show flowing through every transition.</p>
+          </div>
+        </div>
+
+        <div class="anchoring__card reveal" data-category="cultural">
+          <div class="anchoring__card-visual">
+            <img src="assets/images/anchoring/cultural-events/event-04.jpg" alt="Stage Performance" loading="lazy">
+            <div class="anchoring__card-overlay">
+              <span class="anchoring__card-type">Cultural Event</span>
+            </div>
+          </div>
+          <div class="anchoring__card-info">
+            <h3 class="anchoring__card-title">Crowd Engagement</h3>
+            <p class="anchoring__card-desc">Reading the room, working the crowd — that magic moment when everyone is in sync with the energy on stage.</p>
+          </div>
+        </div>
+
+        <div class="anchoring__card reveal" data-category="cultural">
+          <div class="anchoring__card-visual">
+            <img src="assets/images/anchoring/cultural-events/event-05.jpg" alt="Cultural Festival" loading="lazy">
             <div class="anchoring__card-overlay">
               <span class="anchoring__card-type">Cultural Event</span>
             </div>
           </div>
           <div class="anchoring__card-info">
             <h3 class="anchoring__card-title">Cultural Celebrations</h3>
-            <p class="anchoring__card-desc">Anchored traditional and cultural events, seamlessly switching between Tamil and English to connect with diverse audiences.</p>
-          </div>
-        </div>
-
-        <div class="anchoring__card reveal" data-category="college">
-          <div class="anchoring__card-visual">
-            <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&h=500&fit=crop" alt="Stage Performance" loading="lazy">
-            <div class="anchoring__card-overlay">
-              <span class="anchoring__card-type">College Fest</span>
-            </div>
-          </div>
-          <div class="anchoring__card-info">
-            <h3 class="anchoring__card-title">Inter-College Competition</h3>
-            <p class="anchoring__card-desc">High-energy hosting for inter-college competitions — managing time, crowd, and spontaneous moments with ease.</p>
-          </div>
-        </div>
-
-        <div class="anchoring__card reveal" data-category="corporate">
-          <div class="anchoring__card-visual">
-            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=500&fit=crop" alt="Award Ceremony" loading="lazy">
-            <div class="anchoring__card-overlay">
-              <span class="anchoring__card-type">Corporate</span>
-            </div>
-          </div>
-          <div class="anchoring__card-info">
-            <h3 class="anchoring__card-title">Award Ceremony</h3>
-            <p class="anchoring__card-desc">Hosted award ceremonies with a mix of gravitas and warmth, keeping the audience engaged through hours of programming.</p>
+            <p class="anchoring__card-desc">Anchored traditional and cultural events, bringing warmth and energy to crowds of all ages.</p>
           </div>
         </div>
 
         <div class="anchoring__card reveal" data-category="cultural">
           <div class="anchoring__card-visual">
-            <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&h=500&fit=crop" alt="Music Concert" loading="lazy">
+            <img src="assets/images/anchoring/cultural-events/event-06.jpg" alt="Live Hosting" loading="lazy">
             <div class="anchoring__card-overlay">
               <span class="anchoring__card-type">Cultural Event</span>
             </div>
           </div>
           <div class="anchoring__card-info">
-            <h3 class="anchoring__card-title">Live Music Concert</h3>
-            <p class="anchoring__card-desc">Anchored live music events, introducing artists, engaging the crowd, and keeping the energy at its peak.</p>
+            <h3 class="anchoring__card-title">Festival Stage</h3>
+            <p class="anchoring__card-desc">Live event MC work — connecting performers, audience, and the moment into one seamless experience.</p>
           </div>
         </div>
       </div>
