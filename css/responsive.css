@@ -138,6 +138,25 @@ img, video, iframe {
     gap: var(--space-md);
   }
 
+  /* Stats card */
+  .stats-card {
+    padding: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  .stats-card__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  .stats-card__value {
+    font-size: 1rem;
+  }
+
+  .stats-card__sub {
+    font-size: 0.75rem;
+  }
+
   .about__image-placeholder {
     max-width: 280px;
     margin: 0 auto;
