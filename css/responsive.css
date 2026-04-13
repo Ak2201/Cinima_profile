@@ -21,6 +21,10 @@
   .anchoring__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .featured__comments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ---- Mobile & Below (max 768px) ---- */
@@ -85,6 +89,37 @@
 
   /* Showreel */
   .showreel__thumbnails {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Featured Work */
+  .featured__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .featured__stat {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .featured__stat:nth-child(odd) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  .featured__stat:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .featured__comments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured__player-wrapper {
+    max-height: 600px;
+  }
+
+  .featured__screenshot-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 
