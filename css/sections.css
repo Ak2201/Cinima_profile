@@ -277,6 +277,148 @@
 }
 
 /* ============================================
+   BTS GALLERY — Direction Behind the Scenes
+   ============================================ */
+
+.bts-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.bts-gallery__item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  aspect-ratio: 4/3;
+}
+
+.bts-gallery__item--wide {
+  grid-column: span 2;
+  aspect-ratio: 16/9;
+}
+
+.bts-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.bts-gallery__item:hover img {
+  transform: scale(1.05);
+}
+
+.bts-gallery__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-sm) var(--space-md);
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.85));
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+  letter-spacing: var(--ls-normal);
+  transform: translateY(100%);
+  transition: transform 0.4s var(--ease-out-expo);
+}
+
+.bts-gallery__item:hover .bts-gallery__caption {
+  transform: translateY(0);
+}
+
+/* BTS Video section */
+.bts-gallery__videos {
+  margin-top: var(--space-md);
+}
+
+.bts-gallery__video-heading {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--color-accent);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bts-gallery__video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.bts-gallery__video-item {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: border-color var(--t-fast);
+}
+
+.bts-gallery__video-item:hover {
+  border-color: var(--color-accent);
+}
+
+.bts-gallery__video-item video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  background: #000;
+}
+
+.bts-gallery__video-label {
+  padding: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+  letter-spacing: var(--ls-normal);
+}
+
+.bts-gallery__note {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  letter-spacing: var(--ls-normal);
+  padding: var(--space-sm);
+  border: 1px dashed var(--color-border);
+}
+
+@media (max-width: 768px) {
+  .bts-gallery__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bts-gallery__item--wide {
+    grid-column: span 2;
+  }
+
+  .bts-gallery__video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bts-gallery__caption {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .bts-gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bts-gallery__item--wide {
+    grid-column: span 1;
+  }
+}
+
+/* ============================================
    FOCUSED PAGE HERO (direction/acting/anchoring)
    ============================================ */
 
@@ -813,6 +955,79 @@
   color: var(--color-bg-primary);
 }
 
+.featured__video-links {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.featured__watch-link--secondary {
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.featured__watch-link--secondary:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+}
+
+/* Video player grid (Full Film + Teaser + Bloopers) */
+.featured__dual-player {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  max-width: 1100px;
+  margin: 0 auto var(--space-lg);
+}
+
+.featured__dual-item {
+  text-align: center;
+}
+
+.featured__dual-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wide);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.featured__dual-item .featured__player-wrapper {
+  margin-bottom: var(--space-sm);
+}
+
+/* Clickable stat (Comments → Facebook) */
+.featured__stat--link {
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.featured__stat--link:hover {
+  background: var(--color-accent-subtle);
+}
+
+.featured__stat--link:hover .featured__stat-label {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .featured__dual-player {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .featured__dual-player {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Stats row */
 .featured__stats {
   display: grid;
@@ -954,6 +1169,51 @@
   color: var(--color-text-muted);
   letter-spacing: var(--ls-normal);
   font-style: normal;
+}
+
+/* Proof/Achievement gallery */
+.featured__proof {
+  max-width: 800px;
+  margin: 0 auto var(--space-lg);
+}
+
+.featured__proof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.featured__proof-item {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: border-color var(--t-fast), transform var(--t-fast);
+}
+
+.featured__proof-item:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.featured__proof-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.featured__proof-caption {
+  padding: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-accent);
+  letter-spacing: var(--ls-normal);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .featured__proof-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Screenshot gallery */
@@ -1238,6 +1498,27 @@
   height: 16px;
   color: white;
   margin-left: 2px;
+}
+
+/* Embed layout for direction cards with YouTube players */
+.direction__grid--embed {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.direction__card-embed {
+  position: relative;
+  overflow: hidden;
+}
+
+.direction__card-embed .featured__player-wrapper {
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+}
+
+.direction__card-embed .direction__card-badge {
+  z-index: 3;
 }
 
 .direction__card-views {

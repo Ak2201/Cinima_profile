@@ -44,8 +44,8 @@
       <ul class="nav__links">
         <li><a href="index.html">Home</a></li>
         <li><a href="direction.html" class="active">Direction</a></li>
-        <li><a href="acting.html">Acting</a></li>
-        <li><a href="anchoring.html">Anchoring</a></li>
+        <!-- <li><a href="acting.html">Acting</a></li> -->
+        <!-- <li><a href="anchoring.html">Anchoring</a></li> -->
         <li><a href="index.html#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -87,48 +87,81 @@
         <p class="featured__tagline">A single short film. Millions of viewers. One filmmaker doing it all.</p>
       </div>
 
-      <div class="featured__player reveal" style="--reveal-delay: 0.2s">
-        <div class="featured__player-wrapper">
-          <iframe
-            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1311761335592620%2F&show_text=false&width=560&t=0"
-            allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            scrolling="no"
-            frameborder="0"
-            title="Expectation — Short Film">
-          </iframe>
+      <!-- Teaser + Full Film + Bloopers -->
+      <div class="featured__dual-player reveal" style="--reveal-delay: 0.2s">
+        <div class="featured__dual-item">
+          <span class="featured__dual-label">Teaser</span>
+          <div class="featured__player-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/kTrr4SzMshs?rel=0&modestbranding=1"
+              allowfullscreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              frameborder="0"
+              title="Expectation — Teaser">
+            </iframe>
+          </div>
+          <a href="https://youtu.be/kTrr4SzMshs" target="_blank" rel="noopener" class="featured__watch-link">
+            Watch Teaser &rarr;
+          </a>
         </div>
-        <a href="https://www.facebook.com/reel/1311761335592620/" target="_blank" rel="noopener" class="featured__watch-link">
-          Watch on Facebook &rarr;
-        </a>
+        <div class="featured__dual-item">
+          <span class="featured__dual-label">Full Short Film</span>
+          <div class="featured__player-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/5OiYmceVgDE?rel=0&modestbranding=1"
+              allowfullscreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              frameborder="0"
+              title="Expectation — Full Short Film">
+            </iframe>
+          </div>
+          <a href="https://youtu.be/5OiYmceVgDE" target="_blank" rel="noopener" class="featured__watch-link">
+            Watch Full Film &rarr;
+          </a>
+        </div>
+        <div class="featured__dual-item">
+          <span class="featured__dual-label">Bloopers &amp; BTS</span>
+          <div class="featured__player-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/qk-3mGNma5E?rel=0&modestbranding=1"
+              allowfullscreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              frameborder="0"
+              title="Expectation — Bloopers">
+            </iframe>
+          </div>
+          <a href="https://youtu.be/qk-3mGNma5E" target="_blank" rel="noopener" class="featured__watch-link featured__watch-link--secondary">
+            Watch Bloopers &rarr;
+          </a>
+        </div>
       </div>
 
       <div class="featured__stats reveal" style="--reveal-delay: 0.25s">
-        <div class="featured__stat">
+        <a href="https://www.facebook.com/reel/1311761335592620/" target="_blank" rel="noopener" class="featured__stat featured__stat--link">
           <span class="featured__stat-icon">&#9654;</span>
           <span class="featured__stat-number">5.7M+</span>
-          <span class="featured__stat-label">Views</span>
-        </div>
-        <div class="featured__stat">
+          <span class="featured__stat-label">Views &rarr;</span>
+        </a>
+        <a href="https://www.facebook.com/reel/1311761335592620/" target="_blank" rel="noopener" class="featured__stat featured__stat--link">
           <span class="featured__stat-icon">&hearts;</span>
           <span class="featured__stat-number">175K</span>
-          <span class="featured__stat-label">Likes</span>
-        </div>
-        <div class="featured__stat">
+          <span class="featured__stat-label">Likes &rarr;</span>
+        </a>
+        <a href="https://www.facebook.com/reel/1311761335592620/" target="_blank" rel="noopener" class="featured__stat featured__stat--link">
           <span class="featured__stat-icon">&#128172;</span>
           <span class="featured__stat-number">5.4K</span>
-          <span class="featured__stat-label">Comments</span>
-        </div>
-        <div class="featured__stat">
+          <span class="featured__stat-label">Comments &rarr;</span>
+        </a>
+        <a href="https://www.facebook.com/reel/1311761335592620/" target="_blank" rel="noopener" class="featured__stat featured__stat--link">
           <span class="featured__stat-icon">&#8631;</span>
           <span class="featured__stat-number">80.5K</span>
-          <span class="featured__stat-label">Shares</span>
-        </div>
-        <div class="featured__stat">
+          <span class="featured__stat-label">Shares &rarr;</span>
+        </a>
+        <a href="https://www.facebook.com/reel/1311761335592620/" target="_blank" rel="noopener" class="featured__stat featured__stat--link">
           <span class="featured__stat-icon">&#9733;</span>
           <span class="featured__stat-number">45.6K</span>
-          <span class="featured__stat-label">Saves</span>
-        </div>
+          <span class="featured__stat-label">Saves &rarr;</span>
+        </a>
       </div>
 
       <div class="featured__badges reveal" style="--reveal-delay: 0.3s">
@@ -140,6 +173,24 @@
           <span class="featured__badge-icon">&#128293;</span>
           <span class="featured__badge-text">5.7 Million Viewers Worldwide</span>
         </div>
+        <div class="featured__badge">
+          <span class="featured__badge-icon">&#128200;</span>
+          <span class="featured__badge-text">#29 Trending on YouTube India</span>
+        </div>
+      </div>
+
+      <!-- YouTube Trending proof -->
+      <div class="featured__proof reveal" style="--reveal-delay: 0.32s">
+        <div class="featured__proof-grid">
+          <div class="featured__proof-item">
+            <img src="assets/images/direction/expectation/Expectation/IMG-20171202-WA0014.jpg" alt="#29 Trending on YouTube — Expectation" loading="lazy">
+            <p class="featured__proof-caption">#29 Trending on YouTube India &middot; Tamil Short Cuts (182K subscribers)</p>
+          </div>
+          <div class="featured__proof-item">
+            <img src="assets/images/direction/expectation/Expectation/Screenshot_20171129-181752.png" alt="Expectation — Official Poster" loading="lazy">
+            <p class="featured__proof-caption">Official poster &middot; Expectation (2017)</p>
+          </div>
+        </div>
       </div>
 
       <div class="featured__comments-wrapper reveal" style="--reveal-delay: 0.35s">
@@ -150,45 +201,45 @@
 
         <div class="featured__comments-grid">
           <blockquote class="featured__comment">
-            <p>"Such a realistic and reality exposed by Director and actors. Hats off to your team. Your team highlighted my feelings hundred percent..."</p>
-            <cite>&mdash; Jayachandra Babu</cite>
+            <p>"Film was superb! Your acting seems real than others. Cinematography was awesome. Music was good not overlapping the video. Story was good. Superb, keep going!"</p>
+            <cite>&mdash; Viewer via Messenger</cite>
           </blockquote>
           <blockquote class="featured__comment">
-            <p>"Hats off to the story writer. Awesome. In this world there are too many lovers to break because of money. But friends are never... Just close together with your lovely friends."</p>
-            <cite>&mdash; Riya R</cite>
+            <p>"Your acting was good. It was so real. Voice dubbing also perfect, lip sync was on point. Congratulations! Keep going."</p>
+            <cite>&mdash; Viewer via WhatsApp</cite>
           </blockquote>
           <blockquote class="featured__comment">
-            <p>"Hats off to you guys who work in this short film."</p>
-            <cite>&mdash; Anandh Sam</cite>
+            <p>"Short film nala irunthuchu da. Different idea. 17 mins neat ah pochu. Next time um different ah yosichu panu. All the best."</p>
+            <cite>&mdash; Viewer via WhatsApp</cite>
           </blockquote>
           <blockquote class="featured__comment">
-            <p>"Love you friends. He is also true he don't want money he want only good friendship. Enjoy your day with friends. Don't miss it."</p>
-            <cite>&mdash; Raj Kumar Samyappan</cite>
+            <p>"Such a realistic and reality exposed by Director and actors. Hats off to your team. Your team highlighted my feelings hundred percent."</p>
+            <cite>&mdash; Viewer via Facebook</cite>
           </blockquote>
           <blockquote class="featured__comment">
-            <p>"She is correct. Without money how can lead a successful life. Love only is not important — survival is also important."</p>
-            <cite>&mdash; C Anbu</cite>
+            <p>"Hats off to the story writer. Awesome. Friends are never to break. Just close together with your lovely friends."</p>
+            <cite>&mdash; Viewer via Facebook</cite>
           </blockquote>
           <blockquote class="featured__comment">
             <p>"Masss. Its true my buddys. Hats off to you."</p>
-            <cite>&mdash; Sana Sana</cite>
+            <cite>&mdash; Viewer via Facebook</cite>
           </blockquote>
         </div>
 
         <div class="featured__screenshot">
-          <p class="featured__screenshot-label">Real Comments from Facebook Audience</p>
+          <p class="featured__screenshot-label">Real Audience Reactions</p>
           <div class="featured__screenshot-gallery">
             <div class="featured__screenshot-frame">
-              <img src="assets/images/featured-spotlight/comments/comments-01.png" alt="Facebook comments on Expectation — 1" loading="lazy">
+              <img src="assets/images/featured-spotlight/comments/comments-01.png" alt="Audience comments on Expectation" loading="lazy">
             </div>
             <div class="featured__screenshot-frame">
-              <img src="assets/images/featured-spotlight/comments/comments-02.png" alt="Facebook comments on Expectation — 2" loading="lazy">
+              <img src="assets/images/featured-spotlight/comments/comments-02.png" alt="Audience comments on Expectation" loading="lazy">
             </div>
             <div class="featured__screenshot-frame">
-              <img src="assets/images/featured-spotlight/comments/comments-03.png" alt="Facebook comments on Expectation — 3" loading="lazy">
+              <img src="assets/images/featured-spotlight/comments/comments-03.png" alt="Audience comments on Expectation" loading="lazy">
             </div>
             <div class="featured__screenshot-frame">
-              <img src="assets/images/featured-spotlight/comments/comments-04.png" alt="Facebook comments on Expectation — 4" loading="lazy">
+              <img src="assets/images/featured-spotlight/comments/comments-04.png" alt="Audience comments on Expectation" loading="lazy">
             </div>
           </div>
         </div>
@@ -211,87 +262,177 @@
       <div class="portfolio__filters reveal" style="--reveal-delay: 0.15s">
         <button class="portfolio__filter-btn active" data-filter="all" data-gallery="direction">All</button>
         <button class="portfolio__filter-btn" data-filter="short-film" data-gallery="direction">Short Films</button>
+        <button class="portfolio__filter-btn" data-filter="pilot-film" data-gallery="direction">Pilot Film</button>
         <button class="portfolio__filter-btn" data-filter="web-series" data-gallery="direction">Web Series</button>
         <button class="portfolio__filter-btn" data-filter="commercial" data-gallery="direction">Commercials</button>
       </div>
 
-      <div class="direction__grid" id="direction-gallery">
+      <div class="direction__grid direction__grid--embed" id="direction-gallery">
         <div class="direction__card reveal" data-category="short-film">
-          <div class="direction__card-visual" style="--dir-hue: 35; --dir-accent: #6b5a2a">
-            <div class="direction__card-badge">Writer &bull; Director &bull; Actor &bull; Editor</div>
-            <div class="direction__card-play">
-              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-            </div>
-            <div class="direction__card-views">5.7M+ Views</div>
-          </div>
-          <div class="direction__card-info">
-            <span class="direction__card-meta">Short Film &middot; 2017</span>
-            <h3 class="direction__card-title">Expectation</h3>
-            <p class="direction__card-synopsis">A breakout short film that captured 5.7 million hearts. Selected at the Chennai Short Film Festival. Written, directed, acted in, and edited single-handedly.</p>
-            <span class="direction__card-cta">View Project &rarr;</span>
-          </div>
-        </div>
-
-        <div class="direction__card reveal" data-category="short-film">
-          <div class="direction__card-visual" style="--dir-hue: 210; --dir-accent: #2a4a6b">
+          <div class="direction__card-embed" style="background: linear-gradient(135deg, hsl(210 25% 8%), hsl(210 20% 16%)); display:flex; align-items:center; justify-content:center; aspect-ratio:16/9;">
             <div class="direction__card-badge">Director</div>
-            <div class="direction__card-play">
-              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-            </div>
+            <span style="font-family:var(--font-mono); font-size:var(--fs-xs); color:var(--color-text-muted); letter-spacing:var(--ls-wide); text-transform:uppercase;">Video Coming Soon</span>
           </div>
           <div class="direction__card-info">
             <span class="direction__card-meta">Short Film &middot; 2025</span>
             <h3 class="direction__card-title">Am I Selected</h3>
             <p class="direction__card-synopsis">A tense, intimate short exploring the anxiety of auditions and the vulnerability of chasing dreams. Screened at LV Prasad Film Institute.</p>
-            <span class="direction__card-cta">View Project &rarr;</span>
+          </div>
+        </div>
+
+        <div class="direction__card reveal" data-category="short-film">
+          <div class="direction__card-embed">
+            <div class="direction__card-badge">Writer &bull; Director &bull; Actor &bull; Editor</div>
+            <div class="featured__player-wrapper">
+              <iframe src="https://www.youtube.com/embed/5OiYmceVgDE?rel=0&modestbranding=1" allowfullscreen frameborder="0" title="Expectation — Full Short Film"></iframe>
+            </div>
+          </div>
+          <div class="direction__card-info">
+            <span class="direction__card-meta">Short Film &middot; 2017 &middot; 5.7M+ Views on Facebook</span>
+            <h3 class="direction__card-title">Expectation</h3>
+            <p class="direction__card-synopsis">A breakout short film that captured 5.7 million hearts. Selected at the Chennai Short Film Festival. Written, directed, acted in, and edited single-handedly.</p>
           </div>
         </div>
 
         <div class="direction__card reveal" data-category="commercial">
-          <div class="direction__card-visual" style="--dir-hue: 160; --dir-accent: #2a6b4a">
+          <div class="direction__card-embed">
             <div class="direction__card-badge">Director</div>
-            <div class="direction__card-play">
-              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            <div class="featured__player-wrapper">
+              <iframe src="https://www.youtube.com/embed/sUQ4Y91GWts?rel=0&modestbranding=1" allowfullscreen frameborder="0" title="Easwari Engineering College — Ad Film"></iframe>
             </div>
           </div>
           <div class="direction__card-info">
             <span class="direction__card-meta">Commercial &middot; Ad Film</span>
             <h3 class="direction__card-title">Easwari Engineering College</h3>
             <p class="direction__card-synopsis">Institutional brand film showcasing campus life, innovation, and student energy. Directed the full production from concept to delivery.</p>
-            <span class="direction__card-cta">View Project &rarr;</span>
+          </div>
+        </div>
+
+        <div class="direction__card reveal" data-category="pilot-film">
+          <div class="direction__card-embed">
+            <div class="direction__card-badge">Assistant Director</div>
+            <div class="featured__player-wrapper">
+              <iframe src="https://www.youtube.com/embed/5Sge21XPeBI?rel=0&modestbranding=1" allowfullscreen frameborder="0" title="MARAKKA — Pilot Film"></iframe>
+            </div>
+          </div>
+          <div class="direction__card-info">
+            <span class="direction__card-meta">Pilot Film &middot; Unreleased</span>
+            <h3 class="direction__card-title">MARAKKA</h3>
+            <p class="direction__card-synopsis">Worked as Assistant Director on this pilot film. Production was halted due to production issues — but the rough cut speaks for itself.</p>
           </div>
         </div>
 
         <div class="direction__card reveal" data-category="web-series">
-          <div class="direction__card-visual" style="--dir-hue: 270; --dir-accent: #4a2a6b">
+          <div class="direction__card-embed" style="background: linear-gradient(135deg, hsl(270 25% 8%), hsl(270 20% 16%)); display:flex; align-items:center; justify-content:center; aspect-ratio:16/9;">
             <div class="direction__card-badge">Co-Director</div>
-            <div class="direction__card-play">
-              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-            </div>
+            <span style="font-family:var(--font-mono); font-size:var(--fs-xs); color:var(--color-text-muted); letter-spacing:var(--ls-wide); text-transform:uppercase;">Video Coming Soon</span>
           </div>
           <div class="direction__card-info">
             <span class="direction__card-meta">Web Series &middot; YouTube</span>
             <h3 class="direction__card-title">YouTube Web Series</h3>
             <p class="direction__card-synopsis">Co-directed a multi-episode web series for YouTube, managing creative vision, blocking, and on-set direction across the full season.</p>
-            <span class="direction__card-cta">View Project &rarr;</span>
           </div>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- BTS GALLERY — Am I Selected -->
+  <section id="bts-gallery" class="section">
+    <div class="container">
+      <h2 class="section__heading reveal">
+        <span class="section__heading-label">Am I Selected · 2025</span>
+        Behind the Scenes
+      </h2>
+      <div class="section__divider reveal"></div>
+      <p class="direction__intro reveal" style="--reveal-delay: 0.1s">
+        Raw moments from the set of "Am I Selected" — from the director's monitor to the dolly tracks, every frame was a labor of love.
+      </p>
+
+      <!-- BTS Photo Gallery -->
+      <div class="bts-gallery__grid reveal" style="--reveal-delay: 0.2s">
+        <div class="bts-gallery__item bts-gallery__item--wide">
+          <img src="assets/images/direction/am-i-selected/bts/bts photos/IMG_9311.jpg" alt="BTS — Director on set with dramatic backlight" loading="lazy">
+          <div class="bts-gallery__caption">On Set — Director framed in doorway light</div>
+        </div>
+        <div class="bts-gallery__item">
+          <img src="assets/images/direction/am-i-selected/bts/bts photos/IMG_3569.jpg" alt="BTS — Monitoring scene on external monitor" loading="lazy">
+          <div class="bts-gallery__caption">Night shoot — Watching the take</div>
+        </div>
+        <div class="bts-gallery__item">
+          <img src="assets/images/direction/am-i-selected/bts/bts photos/IMG_9384.jpg" alt="BTS — Studio set with blue lighting and dolly" loading="lazy">
+          <div class="bts-gallery__caption">Studio set — Dolly track and blue wash</div>
+        </div>
+        <div class="bts-gallery__item">
+          <img src="assets/images/direction/am-i-selected/bts/bts photos/IMG_3556.jpg" alt="BTS — Director's monitor showing scene" loading="lazy">
+          <div class="bts-gallery__caption">Director's monitor — Reviewing the frame</div>
+        </div>
+        <div class="bts-gallery__item">
+          <img src="assets/images/direction/am-i-selected/bts/bts photos/IMG_9312.jpg" alt="BTS — Behind the camera" loading="lazy">
+          <div class="bts-gallery__caption">Behind the camera</div>
+        </div>
+      </div>
+
+      <!-- BTS Video Clips -->
+      <div class="bts-gallery__videos reveal" style="--reveal-delay: 0.3s">
+        <h3 class="bts-gallery__video-heading">BTS Video Clips</h3>
+        <div class="bts-gallery__video-grid">
+          <div class="bts-gallery__video-item">
+            <video controls preload="metadata">
+              <source src="assets/images/direction/am-i-selected/bts/Bts video/4A3443AD-06FD-4461-B8C8-534514ACA58A.MP4" type="video/mp4">
+            </video>
+            <p class="bts-gallery__video-label">On Set — Shoot Day</p>
+          </div>
+          <div class="bts-gallery__video-item">
+            <video controls preload="metadata">
+              <source src="assets/images/direction/am-i-selected/bts/Bts video/IMG_9328.MOV">
+            </video>
+            <p class="bts-gallery__video-label">Directing on Location</p>
+          </div>
+          <div class="bts-gallery__video-item">
+            <video controls preload="metadata">
+              <source src="assets/images/direction/am-i-selected/bts/Bts video/IMG_9327.mov">
+            </video>
+            <p class="bts-gallery__video-label">Scene Rehearsal</p>
+          </div>
+          <div class="bts-gallery__video-item">
+            <video controls preload="metadata">
+              <source src="assets/images/direction/am-i-selected/bts/Bts video/IMG_9325.mov">
+            </video>
+            <p class="bts-gallery__video-label">Camera Setup</p>
+          </div>
+          <div class="bts-gallery__video-item">
+            <video controls preload="metadata">
+              <source src="assets/images/direction/am-i-selected/bts/Bts video/IMG_9234.mov">
+            </video>
+            <p class="bts-gallery__video-label">Blocking the Shot</p>
+          </div>
+          <div class="bts-gallery__video-item">
+            <video controls preload="metadata">
+              <source src="assets/images/direction/am-i-selected/bts/Bts video/IMG_9386.MOV">
+            </video>
+            <p class="bts-gallery__video-label">Night Shoot — Lighting Setup</p>
+          </div>
+          <div class="bts-gallery__video-item">
+            <video controls preload="metadata">
+              <source src="assets/images/direction/am-i-selected/bts/Bts video/IMG_3945.MOV">
+            </video>
+            <p class="bts-gallery__video-label">Set Walk-Through</p>
+          </div>
+        </div>
+        <p class="bts-gallery__note">39 BTS clips from the "Am I Selected" shoot &middot; Full BTS reel available on request</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTION SECTION continues below -->
+  <section id="cross-nav-section" class="section">
+    <div class="container">
       <!-- Cross-page navigation -->
       <div class="cross-nav reveal" style="--reveal-delay: 0.3s">
         <p class="cross-nav__label">Explore More</p>
         <div class="cross-nav__links">
-          <a href="acting.html" class="cross-nav__link">
-            <span class="cross-nav__num">04</span>
-            <span class="cross-nav__title">Acting Portfolio</span>
-            <span class="cross-nav__arrow">&rarr;</span>
-          </a>
-          <a href="anchoring.html" class="cross-nav__link">
-            <span class="cross-nav__num">05</span>
-            <span class="cross-nav__title">Anchoring &amp; Hosting</span>
-            <span class="cross-nav__arrow">&rarr;</span>
-          </a>
           <a href="index.html" class="cross-nav__link">
             <span class="cross-nav__num">00</span>
             <span class="cross-nav__title">Full Portfolio</span>
