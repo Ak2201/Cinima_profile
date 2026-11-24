@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Studio — Admin</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="side">
+      <div class="brand"><span class="dot">AM</span><div><b>Portfolio Studio</b><small>Admin console</small></div></div>
+      <nav id="nav" aria-label="Admin sections"></nav>
+      <div class="side-foot">
+        <div id="account"></div>
+        <a href="index.html" id="liveLink" target="_blank" rel="noopener">Open live site ↗</a>
+        <span id="storage" class="muted"></span>
+      </div>
+    </aside>
+
+    <section class="work">
+      <header class="bar">
+        <button class="icon only-mobile" id="menu" type="button" aria-label="Menu">☰</button>
+        <div class="crumb"><span class="muted">Studio /</span> <b id="title">Dashboard</b></div>
+        <span class="state" id="state"></span>
+        <div class="bar-actions">
+          <button class="ghost only-mobile" id="togglePreview" type="button">Preview</button>
+          <button class="ghost" id="discard" type="button">Discard draft</button>
+          <button class="primary" id="publish" type="button">Publish</button>
+        </div>
+      </header>
+      <div class="editor" id="editor"></div>
+    </section>
+
+    <section class="preview" id="preview" aria-label="Live preview">
+      <div class="preview-bar">
+        <div class="seg" role="group" aria-label="Device">
+          <button type="button" data-device="desktop" aria-pressed="true">Desktop</button>
+          <button type="button" data-device="mobile" aria-pressed="false">Mobile</button>
+        </div>
+        <label class="lens-pick">Lens <select id="lensPick"></select></label>
+        <button class="icon" type="button" id="reload" aria-label="Reload preview">↻</button>
+      </div>
+      <div class="stage" id="stage"><iframe id="frame" title="Draft preview" src="index.html?preview=1"></iframe></div>
+    </section>
+  </div>
+  <dialog class="signin" id="signin" aria-labelledby="signinTitle">
+    <form id="ghForm" autocomplete="off">
+      <h2 id="signinTitle">Connect to GitHub</h2>
+      <p class="muted">Publishing saves your changes to the portfolio's GitHub repository, and GitHub Pages puts them live. Only someone with write access to the repository can publish.</p>
+      <label class="f"><span>Repository</span><input type="text" id="ghRepo" placeholder="owner/repository" required spellcheck="false"></label>
+      <label class="f"><span>Branch</span><input type="text" id="ghBranch" value="main" required spellcheck="false"></label>
+      <label class="f"><span>Access token</span><input type="password" id="ghToken" required autocomplete="off" spellcheck="false" placeholder="github_pat_…"></label>
+      <details class="help">
+        <summary>How do I get a token? (2 minutes)</summary>
+        <ol>
+          <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → Fine-grained tokens → Generate new token</a>.</li>
+          <li><b>Repository access:</b> “Only select repositories” → pick your portfolio repo.</li>
+          <li><b>Permissions:</b> Contents → <i>Read and write</i>. Optionally Pages → <i>Read</i> (to show deploy status).</li>
+          <li>Set an expiry (e.g. 90 days), generate, and paste it above.</li>
+        </ol>
+        <p class="muted">The token is only sent to api.github.com. It's kept in this browser tab, or on this device if you tick “Remember”.</p>
+      </details>
+      <label class="check"><input type="checkbox" id="ghRemember"> Remember on this device</label>
+      <p class="err" id="ghErr" role="alert"></p>
+      <div class="dlg-actions"><button class="ghost" type="button" id="ghLocal">Continue in local mode</button><button class="primary" type="submit" id="ghGo">Connect</button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="filePick" accept="image/*" hidden>
+  <input type="file" id="jsonPick" accept="application/json,.json" hidden>
+
+  <script src="data/content.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
